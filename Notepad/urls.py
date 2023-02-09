@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from core.urlsApi import router
+from core.apiViews import NoteListPriorityViewSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('priority', NoteListPriorityViewSet.as_view())
 ]
