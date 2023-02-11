@@ -16,5 +16,20 @@ urgente e importante, esses atributos podem assumir apenas valores lógicos de v
 |    3º     |   Falso    | Verdadeiro |       Delegar       |
 |    4º     |   Falso    |   Falso    |      Eliminar       |
 
+### Diagrama da Matriz
 
+![](https://github.com/MaercioMamedes/Notepad-Django/blob/master/docs/Matriz_de_Eisenhower.png?raw=true)
 
+## Building
+
+Esse projeto foi desenvolvido utilizando a versão 3.2.6 do interpretador Python. Todas as dependências
+estão listadas no arquivo *requiments.txt*
+
+### Como rodar ?
+
+* realize o clone do repositório - `git clone https://github.com/MaercioMamedes/Notepad-Django.git`
+* [crie um ambiente virtual dentro do diretório do projeto e instale todas as dependências](https://www.alura.com.br/artigos/ambientes-virtuais-em-python)
+
+### Funcionalidades
+* CRUD (Create , Read, Update e Delete) de usuário de notas de tarefas
+* Listagem de notas agrupadas de acordo como o nível de prioridade classicado pela *matriz de Heisenhower*
