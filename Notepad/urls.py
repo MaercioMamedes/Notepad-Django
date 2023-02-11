@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from core.urlsApi import router
-from core.apiViews import NoteListPriorityViewSet, NoteListScheduleViewSet, NoteListDelegateViewSet, NoteListEliminateViewSet
+from core.apiViews import NoteListPriorityViewSet, NoteListScheduleViewSet, NoteListDelegateViewSet, NoteListEliminateViewSet, \
+    AssignmentListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,6 @@ urlpatterns = [
     path('agendar', NoteListScheduleViewSet.as_view()),
     path('delegar', NoteListDelegateViewSet.as_view()),
     path('eliminar', NoteListEliminateViewSet.as_view()),
+    path('users/<int:user_id>/notas-atribuidas/', AssignmentListView.as_view()),
+
 ]

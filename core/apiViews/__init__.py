@@ -5,3 +5,5 @@ from .NoteListPriorityViewSet import *
 from .NoteListScheduleViewSet import *
 from .NoteListDelegateViewSet import *
 from .NoteListEliminateViewSet import *
+from .AssignmentListView import *
+from .AssignmentViewSet import *
