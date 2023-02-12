@@ -33,3 +33,32 @@ estão listadas no arquivo *requiments.txt*
 ### Funcionalidades
 * CRUD (Create , Read, Update e Delete) de usuário de notas de tarefas
 * Listagem de notas agrupadas de acordo como o nível de prioridade classicado pela *matriz de Heisenhower*
+
+### End points
+
+|                  URI                   |    MÉTODO    |                     RECURSO                      |
+|:--------------------------------------:|:------------:|:------------------------------------------------:|
+|               /usuarios                |     GET      |               lista todos usuários               |
+|               /usuarios                |     POST     |                Cria novo usuário                 |
+|         /usuarios/{ user_id }          |     GET      |                 retorna usuário                  |
+|         /usuarios/{ user_id }          | PUT ou PATCH |                 atualiza usuário                 |
+|         /usuarios/{ user_id }          |    DELETE    |                  deleta usuário                  |
+| /usuarios/{ user_id }/notas-atribuidas |     GET      |    lista todas as notas atribuídas ao usuário    |
+|               /categoria               |     GET      |              lista todas categorias              |
+|               /categoria               |     POST     |               cria nova categorias               |
+|      /categoria/{ categoria_id }       |     GET      |                retorna categoria                 |
+|      /categoria/{ categoria_id }       | PUT OU PATCH |                Atualiza categoria                |
+|      /categoria/{ categoria_id }       |    DELETE    |                 deleta categoria                 |
+|                 /notas                 |     GET      |               lista todas as notas               |
+|                 /notas                 |     POST     |                cria uma nova nota                |
+|           /notas/{ nota_id}            | PUT OU PATCH |                  atualiza nota                   |
+|           /notas/{ nota_id }           |    DELETE    |                   deleta nota                    |
+|              /atribuicao               |     GET      |         lista todas atribuições de notas         |
+|              /atribuicao               |     POST     |         cria uma nova atribuição de nota         |
+|        /atribuicao/{ attr_id }         |     GET      |            retorna atribuição de nota            |
+|        /atribuicao/{ attr_id }         | PUT OU PATCH |           atualiza atribuição de nota            |
+|        /atribuicao/{ attr_id }         |    DELETE    |            deleta atribuição de nota             |
+|                 /fazer                 |     GET      | retorna todas as notas do 1ª quadrante da matriz |                
+|                /agendar                |     GET      | retorna todas as notas do 2ª quadrante da matriz |
+|                /delegar                |     GET      | retorna todas as notas do 3ª quadrante da matriz |
+|               /eliminar                |     GET      | retorna todas as notas do 4ª quadrante da matriz |
