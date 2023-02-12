@@ -29,6 +29,7 @@ estão listadas no arquivo *requiments.txt*
 
 * realize o clone do repositório - `git clone https://github.com/MaercioMamedes/Notepad-Django.git`
 * [crie um ambiente virtual dentro do diretório do projeto e instale todas as dependências](https://www.alura.com.br/artigos/ambientes-virtuais-em-python)
+* rode o comando `python manage.py runserver`
 
 ### Funcionalidades
 * CRUD (Create , Read, Update e Delete) de usuário de notas de tarefas
@@ -62,3 +63,49 @@ estão listadas no arquivo *requiments.txt*
 |                /agendar                |     GET      | retorna todas as notas do 2ª quadrante da matriz |
 |                /delegar                |     GET      | retorna todas as notas do 3ª quadrante da matriz |
 |               /eliminar                |     GET      | retorna todas as notas do 4ª quadrante da matriz |
+
+### atributos dos modelos
+
+#### User 
+`{
+    "username": input_username,
+    "first_name": input_first_name,
+    "last_name": input_last_name,
+    "email": input_email,
+    "password": input_password
+}`
+
+#### Category
+`{
+    "name": input_category_name,
+    "created_by": input_user_id,
+}`
+
+#### Note
+`{
+    "title": input_title,
+    "urgency": input_urgency_boolean,
+    "important": input_important_boolean,
+    "content": input_content,
+    "user": input_user_id,
+    "category": input_category_tagoru_id
+}`
+
+#### Assignment
+`{
+    "assigned_to": input_user_id,
+    "note": input_note_id
+}`
+
+### Disposições finais
+
+Você pode navegar por essa aplicação, utilizando o próprio browser, inclusive pode acessar django-admin,
+como super usuário e acessar a base de dados do projeto.
+Para criar um super usuário execute os seguintes passos, no terminal:
+* execute `python manage.py createsuperuser`
+* digite um username válido
+* digite uma senha válida
+* confirme a senha digitada
+
+Pronto, após a criação da conta de superusuário, rode a aplicação e acesse a uri `/admin`, na tela de 
+login você digita o username e as senhas criados para seu superusuário.
